@@ -21,6 +21,7 @@ sudo python3 app.py
 ```docker inspect <container_id>```
 
 
+
 ### Example when running DB runs as a docker container and app is running locally
 ```
 export DBHOST=127.0.0.1
