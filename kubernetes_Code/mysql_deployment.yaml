@@ -1,11 +1,14 @@
 apiVersion: apps/v1
-kind: ReplicaSet
+kind: Deployment
+# Metadata
 metadata:
-  name: mysql-replicaset
+  name: mysql
   labels:
-    app: mysql
+    app: mysqlserver
+  name: mysql
+# Adding Spec
 spec:
-  replicas: 3
+  replicas: 1
   selector:
     matchLabels:
       app: mysql
@@ -14,12 +17,14 @@ spec:
       labels:
         app: mysql
     spec:
+    # Adding container spec
       containers:
       - name: mysql
+      # name of db image
         image: 519511800294.dkr.ecr.us-east-1.amazonaws.com/mysqldb:v2.0
         env:
         - name: MYSQL_ROOT_PASSWORD
-          value: "dbpwd"
+          value: "sunil123"
         ports:
-         - containerPort: 8080
+         - containerPort: 3306
            protocol: TCP
