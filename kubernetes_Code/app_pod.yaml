@@ -3,10 +3,10 @@ kind: Pod
 metadata:
   labels:
     app: webserver
-  name:  app_sunil
+  name:  app
 spec:
   containers:
-    - name: app_sunil
+    - name: app
       image: 519511800294.dkr.ecr.us-east-1.amazonaws.com/docker:v1.0
       ports:
         - containerPort: 8080
@@ -17,6 +17,6 @@ spec:
         - name: DBUSER
           value: "root"
         - name: DBPWD
-          value: "sunil123"
+          value: "dbpwd"
         - name: DBPORT
           value: "3306"

@@ -14,4 +14,4 @@ spec:
 
       env:
        - name: MYSQL_ROOT_PASSWORD
-         value: "sunil123"
+         value: "dbpwd"
