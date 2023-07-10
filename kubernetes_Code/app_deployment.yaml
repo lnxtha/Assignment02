@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: app_sunil
+  name: app
   labels:
     app: webserver
 spec:
@@ -15,7 +15,7 @@ spec:
         app: employees
     spec:
       containers:
-      - name: app_sunil
+      - name: app
         ports:
           - containerPort: 8080
             protocol: TCP
@@ -24,7 +24,7 @@ spec:
         - name: DBPORT
           value: "3306"
         - name: DBPWD
-          value: "sunil123"
+          value: "dbpwd"
         - name: DBHOST
           value: "mysql.sunil.svc.cluster.local"
         - name: DBUSER
